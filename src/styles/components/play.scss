@@ -1,0 +1,90 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80") ;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question {
+  //background-color: $off-white;
+  backdrop-filter: blur(20px);
+  width: 80vw;
+  //margin: $lg auto 0 auto;
+  //padding: $sm $md;
+  margin: auto auto;
+  border-radius: 1rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 5rem;
+  text-align: center;
+}
+
+h5,p {
+  font-size: 1.2rem;
+  margin-bottom: $lg;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.options-container {
+  display: inline-block;
+  width: 50%;
+}
+
+.option {
+  //background-color: $blue;
+  border-radius: 5rem;
+  //color: #fff;
+  cursor: pointer;
+  margin: $md auto;
+  padding: $normal;
+  transition: .3s linear all;
+  text-align: left;
+  width: 90%;
+  border: 1px solid #000;
+}
+
+.option:hover {
+  background-color: darken($blue,20%);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: $md;
+  width: 80%;
+}
+
+.next, .quit{
+  padding: 10px 20px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.next {
+  background-color: green;
+}
+
+.next:hover{
+  background-color: darken(green, 10%);
+}
+
+.quit {
+  background-color: red;
+}
+
+.quit:hover{
+  background-color: darken(red, 10%);
+}

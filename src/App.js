@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react'
+import { Route, Routes, useNavigate} from "react-router-dom";
+import Home from "./components/Home";
+import Play from "./components/Play";
+import QuizSummary from "./components/quiz/QuizSummary";
 function App() {
+  const navigate = useNavigate()
+  const [data, setData] = useState([])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/play" element={<Play navigate={navigate} setData={setData}/> }></Route>
+        <Route path="/quizsummary" element={<QuizSummary
+            navigate={navigate}
+            data={data}
+        /> }></Route>
+    </Routes>
   );
 }
 
